@@ -23,7 +23,7 @@
     }
      ?>
 
-     
+
       <?php
         $query = "SELECT * FROM posts";
         $select_posts = mysqli_query($connection, $query);
@@ -54,6 +54,7 @@
                 echo "<td>$tag</td>";
                 echo "<td>$comment</td>";
                 echo "<td>$date</td>";
+                echo "<td><a href='posts.php?source=edit_post&post_id={$id}'>Edit</a></td>";
                 echo "<td><a href='posts.php?delete={$id}'>Delete</a></td>";
                 echo "</tr>";
             }
