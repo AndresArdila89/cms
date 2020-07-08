@@ -3,7 +3,7 @@
     <tr>
       <th>Id</th>
       <th>Author</th>
-      <th>Title/th>
+      <th>Title</th>
       <th>Category</th>
       <th>Status</th>
       <th>Image</th>

@@ -58,7 +58,9 @@
 
   <div class="form-group">
     <label for="">Post Content</label>
-    <input type="text" name="post_content" value="<?php echo $content; ?>" class="form-control">
+    <textarea type="text" name="post_content" class="form-control">
+      <?php echo $content; ?>
+    </textarea>
   </div>
 
   <div class="form-group">
