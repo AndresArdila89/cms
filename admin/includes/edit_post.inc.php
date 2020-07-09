@@ -17,7 +17,7 @@
               $status = $row['post_status'];
               $image = $row['post_image'];
               $tag = $row['post_tags'];
-              $content = $row['post_content'];
+              $content = trim($row['post_content']);
           }
       }
   }
@@ -33,7 +33,25 @@
   </div>
   <div class="form-group">
     <label for="">Post category id</label>
-    <input type="text" name="post_category_id" value="<?php echo $category_id; ?>" class="form-control">
+    <select class="form-control" name="categories">
+      <?php
+        $sql = "SELECT * FROM categories";
+        $result = mysqli_query($connection, $sql);
+
+        if (!$result) {
+            die("QUERY FAILED". mysqli_error($connection));
+        } else {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $cat = $row['cat_title'];
+                $cat_id = $row['cat_id'];
+
+                echo "<option value='cat_id'>{$cat}</option>";
+            }
+        }
+      ?>
+
+    </select>
+    
   </div>
 
   <div class="form-group">
@@ -58,9 +76,7 @@
 
   <div class="form-group">
     <label for="">Post Content</label>
-    <textarea type="text" name="post_content" class="form-control">
-      <?php echo $content; ?>
-    </textarea>
+    <textarea type="text" name="post_content" class="form-control"><?php echo $content; ?></textarea>
   </div>
 
   <div class="form-group">
