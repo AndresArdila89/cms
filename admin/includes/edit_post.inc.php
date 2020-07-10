@@ -51,7 +51,7 @@
       ?>
 
     </select>
-    
+
   </div>
 
   <div class="form-group">
@@ -66,6 +66,8 @@
 
   <div class="form-group">
     <label for="">Post Image</label>
+    <img height="100" src="../<?php echo $image ?>" alt="">
+
     <input type="file" name="image" value="<?php echo $image ?>" class="form-control">
   </div>
 
