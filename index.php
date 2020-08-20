@@ -27,6 +27,7 @@
                   $select_all_post_query = mysqli_query($connection, $query);
 
                   while ($row = mysqli_fetch_assoc($select_all_post_query)) {
+                      $post_id = $row['post_id'];
                       $post_title = $row['post_title'];
                       $post_author = $row['post_author'];
                       $post_date = $row['post_date'];
@@ -38,7 +39,7 @@
 
                  ?>
 
-            
+
 
 
             </div>
