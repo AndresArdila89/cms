@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 26, 2020 at 09:05 PM
+-- Generation Time: Jul 14, 2020 at 05:29 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -40,7 +40,9 @@ INSERT INTO `categories` (`cat_id`, `cat_title`) VALUES
 (2, 'Javascript'),
 (5, 'PHP'),
 (17, 'LARAVEL'),
-(20, 'Bootstrap 4');
+(20, 'Bootstrap 4'),
+(21, 'OOP'),
+(22, 'C++');
 
 -- --------------------------------------------------------
 
@@ -66,7 +68,9 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`, `post_date`, `post_image`, `post_content`, `post_tags`, `post_comment_count`, `post_status`) VALUES
-(1, 1, 'SCRUMFIT FIRST POST', 'ANDRES ARDILA ', '2020-05-26', 'images/post1.jpg', 'FIRST POST TEST IS WORKING ', 'andres, scrumfit , colombia', 0, 'draft');
+(1, 2, 'SCRUMFIT FIRST POST', 'ANDRES ARDILA ', '2020-05-26', 'images/congelado.png', 'try 999', 'andres, scrumfit , colombia', 0, 'public'),
+(10, 21, 'let see how it works ', 'andres ardila', '2020-07-10', 'images/feliz.png', 'this post contains nothing ......', 'andres , farra , celebracion', 4, 'public'),
+(11, 20, 'updaate', 'adf', '2020-07-10', 'images/triste.png', '    hkdshjlidasfjlfagds', 'adf', 4, 'sdfdsf');
 
 --
 -- Indexes for dumped tables
@@ -92,13 +96,13 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `cat_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `cat_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

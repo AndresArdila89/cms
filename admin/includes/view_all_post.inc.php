@@ -44,11 +44,22 @@
                 $status = $row['post_status'];
 
 
+
+
+
                 echo "<tr>";
                 echo "<td>$id</td>";
                 echo "<td>$author</td>";
                 echo "<td>$title</td>";
-                echo "<td>$category</td>";
+
+                $query = "SELECT * FROM categories WHERE cat_id = $category";
+                $select_categorie = mysqli_query($connection, $query);
+                while ($row = mysqli_fetch_assoc($select_categorie)) {
+                    $cat_id= $row['cat_id'];
+                    $cat_title = $row['cat_title'];
+                    echo "<td>$cat_title</td>";
+                }
+
                 echo "<td>$status</td>";
                 echo "<td><img class='img-responsive' width='100' src='../$image' alt=''> </td>";
                 echo "<td>$tag</td>";
