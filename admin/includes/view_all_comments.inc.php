@@ -10,6 +10,7 @@
       <th>Date</th>
       <th>Approve</th>
       <th>Unapprove</th>
+      <th>Edit</th>
       <th>Delete</th>
     </tr>
   </thead>
@@ -49,6 +50,7 @@
                 echo "<tr>";
                 echo "<td>$id</td>";
                 echo "<td>$author</td>";
+                echo "<td>$content</td>";
                 echo "<td>$email</td>";
 
                 // $query = "SELECT * FROM categories WHERE cat_id = $category";
@@ -59,8 +61,10 @@
                 //     echo "<td>$cat_title</td>";
                 // }
 
-                echo "<td>$content</td>";
+
                 echo "<td>$status</td>";
+
+                echo "<td>pending</td>";
                 echo "<td>$date</td>";
                 echo "<td><a href='posts.php?source=edit_post&post_id={$id}'>Approve</a></td>";
                 echo "<td><a href='posts.php?delete={$id}'>Unapprove</a></td>";
